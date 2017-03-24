@@ -1,0 +1,24 @@
+{
+  "name": "node_scraper",
+  "version": "1.0.0",
+  "description": "web_scraper",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanosten/content_scraper.git"
+  },
+  "keywords": [
+    "web",
+    "scraper",
+    "node"
+  ],
+  "author": "r_osto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanosten/content_scraper/issues"
+  },
+  "homepage": "https://github.com/ryanosten/content_scraper#readme"
+}
