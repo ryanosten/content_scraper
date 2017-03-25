@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/ryanosten/content_scraper/issues"
   },
-  "homepage": "https://github.com/ryanosten/content_scraper#readme"
+  "homepage": "https://github.com/ryanosten/content_scraper#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "json2csv": "^3.7.3",
+    "request": "^2.81.0"
+  }
 }

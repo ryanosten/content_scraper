@@ -1,3 +1,4 @@
+/*
 1. create scraper.js with command line app
   a.check for a folder called 'data', if not exist then create one, if exists do nothing
   b. should visit shirts4mike.com and uses /shirt.php as entry point to scrape information for 8 tee-shirts
