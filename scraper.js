@@ -8,9 +8,9 @@ const json2csv = require('json2csv');
 
 const shirtsObj = [];
 
-function getShirts(URL){
+function getShirts(anchor){
   //grab the list item href and make request to this path
-  const requestURL = `http://www.shirts4mike.com/${URL.attr('href')}`;
+  const requestURL = `http://www.shirts4mike.com/${anchor.attr('href')}`;
 
   const req = http.get(requestURL, response => {
     console.log(response.statusCode);
