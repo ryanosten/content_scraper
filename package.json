@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/ryanosten/content_scraper#readme",
   "dependencies": {
+    "async": "^2.2.0",
     "cheerio": "^0.22.0",
     "json2csv": "^3.7.3",
     "request": "^2.81.0"
