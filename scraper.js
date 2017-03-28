@@ -9,6 +9,7 @@ const async = require('async');
 const shirtsObj = [];
 
 const getShirts = function(item){
+  console.log('ran');
   //grab the list item href and make request to this path
   const url = `http://www.shirts4mike.com/${item.attribs.href}`;
 
@@ -37,6 +38,7 @@ const getShirts = function(item){
       image,
       URL: url
     });
+    console.log('got response');
   });
 };
 
@@ -63,11 +65,11 @@ request('http://www.shirts4mike.com/shirts.php', (err, res, body) => {
 
   async.each(shirtAnchors, function(item, callback){
     getShirts(item);
-  }, function(err){
-      if(err){
-      console.log('theres an error');
-      } else {
-        console.log('theres no error');
-      }
+    callback(null);
+  }, function(err) {
+    if(err){
+      return console.log(err);
+    }
+    console.log('done');
   });
 });
