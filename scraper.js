@@ -6,10 +6,7 @@ const request = require('request');
 const json2csv = require('json2csv');
 const async = require('async');
 
-const shirtsObj = [];
-
-const getShirts = function(item){
-  console.log('ran');
+const getShirts = function(item, callback){
   //grab the list item href and make request to this path
   const url = `http://www.shirts4mike.com/${item.attribs.href}`;
 
@@ -32,13 +29,12 @@ const getShirts = function(item){
     const price = $('span.price').text();
     const image = `http://shirts4mike.com/${$('.shirt-picture span img').attr('src')}`;
 
-    shirtsObj.push({
+    callback(null, {
       title,
       price,
       image,
       URL: url
     });
-    console.log('got response');
   });
 };
 
@@ -63,13 +59,22 @@ request('http://www.shirts4mike.com/shirts.php', (err, res, body) => {
 
   const shirtAnchors = $('.products li a');
 
-  async.each(shirtAnchors, function(item, callback){
-    getShirts(item);
-    callback(null);
-  }, function(err) {
+  async.map(shirtAnchors, getShirts, function(err, results){
     if(err){
-      return console.log(err);
+      console.log('error occured');
+    } else {
+      csvMagic(results);
     }
-    console.log('done');
   });
 });
+
+
+var csvMagic = function(shirtData){
+  const shirtFields = ['title', 'price', 'image', 'URL'];
+  const csv = json2csv({data: shirtData, field: shirtFields})
+
+  fs.writeFile('data/data.csv', csv, function(err){
+    if (err) throw err;
+    console.log('file saved');
+  })
+}
