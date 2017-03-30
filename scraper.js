@@ -25,22 +25,20 @@ const getShirts = function(item, callback){
       ignoreWhitespace: true
     });
 
-    const title = $('.shirt-picture span img').attr('alt');
-    const price = $('span.price').text();
-    const image = `http://shirts4mike.com/${$('.shirt-picture span img').attr('src')}`;
+    const Title = $('.shirt-picture span img').attr('alt');
+    const Price = $('span.price').text();
+    const Image = `http://shirts4mike.com/${$('.shirt-picture span img').attr('src')}`;
+    const Time = ''
 
     callback(null, {
-      title,
-      price,
-      image,
-      URL: url
+      Title,
+      Price,
+      Image,
+      URL: url,
+      Time: ''
     });
   });
 };
-
-if(!fs.existsSync('./data')){
-  fs.mkdirSync('./data');
-}
 
 request('http://www.shirts4mike.com/shirts.php', (err, res, body) => {
   if (err) {
@@ -72,8 +70,14 @@ request('http://www.shirts4mike.com/shirts.php', (err, res, body) => {
 var csvMagic = function(shirtData){
   const shirtFields = ['title', 'price', 'image', 'URL'];
   const csv = json2csv({data: shirtData, field: shirtFields})
+  const date = new Date();
+  const current_date = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`;
 
-  fs.writeFile('data/data.csv', csv, function(err){
+  if(!fs.existsSync('./data')){
+    fs.mkdirSync('./data');
+  }
+
+  fs.writeFile(`data/${current_date}.csv`, csv, function(err){
     if (err) throw err;
     console.log('file saved');
   })
