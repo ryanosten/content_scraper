@@ -4,7 +4,8 @@
   "description": "web_scraper",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node scraper.js"
   },
   "repository": {
     "type": "git",

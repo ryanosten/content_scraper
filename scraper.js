@@ -27,47 +27,22 @@ const getShirts = function(item, callback){
 
     const Title = $('.shirt-picture span img').attr('alt');
     const Price = $('span.price').text();
-    const Image = `http://shirts4mike.com/${$('.shirt-picture span img').attr('src')}`;
-    const Time = ''
+    const ImageUrl = `http://shirts4mike.com/${$('.shirt-picture span img').attr('src')}`;
+
+    const date = new Date();
+    const Time = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}T${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
 
     callback(null, {
       Title,
       Price,
-      Image,
+      ImageUrl,
       URL: url,
-      Time: ''
+      Time
     });
   });
 };
 
-request('http://www.shirts4mike.com/shirts.php', (err, res, body) => {
-  if (err) {
-    console.error(new Error(err));
-    process.exit(1);
-  }
-
-  if (res.statusCode !== 200) {
-    console.error(new Error(`Received code: ${res.statusCode}`));
-    process.exit(2);
-  }
-
-  const $ = cheerio.load(body, {
-    ignoreWhitespace: true
-  });
-
-  const shirtAnchors = $('.products li a');
-
-  async.map(shirtAnchors, getShirts, function(err, results){
-    if(err){
-      console.log('error occured');
-    } else {
-      csvMagic(results);
-    }
-  });
-});
-
-
-var csvMagic = function(shirtData){
+const csvMagic = function(shirtData){
   const shirtFields = ['title', 'price', 'image', 'URL'];
   const csv = json2csv({data: shirtData, field: shirtFields})
   const date = new Date();
@@ -82,3 +57,40 @@ var csvMagic = function(shirtData){
     console.log('file saved');
   })
 }
+
+const logError = function(error, err){
+  const time = new Date();
+  fs.writeFile('logs/scraper-error.log', `${time.toUTCString()} | ${error} `, {flag: "a"}, (err) => {
+    if (err){
+      console.error(`There's been an ${err} error.`);
+    } else {
+      console.log('error logged to log file');
+      console.error(new Error(`There's been a ${error} error. Cannot connect to http://www.shirts4mike.com/shirts.php`))
+      process.exit();
+    }
+  });
+}
+
+request('http://www.shirts4mike.com/shirts.ph', (err, res, body) => {
+  if (err) {
+    console.error(new Error(`There's been an ${err} error. Cannot connect to http://www.shirts4mike.com/shirts.php`));
+    logError(err, null);
+  } else if (res.statusCode !== 200) {
+    logError(res.statusCode, err);
+  } else {
+
+    const $ = cheerio.load(body, {
+      ignoreWhitespace: true
+    });
+
+    const shirtAnchors = $('.products li a');
+
+    async.map(shirtAnchors, getShirts, function(err, results){
+      if(err){
+        console.error(`The following error occured: ${err}`);
+      } else {
+        csvMagic(results);
+      }
+    });
+  }
+});
