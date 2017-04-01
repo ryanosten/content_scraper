@@ -1,2 +1,90 @@
  
-Fri, 31 Mar 2017 16:56:53 GMT | 404 Fri, 31 Mar 2017 16:56:56 GMT | 404 Fri, 31 Mar 2017 16:56:59 GMT | 404 Fri, 31 Mar 2017 16:58:43 GMT | Error: getaddrinfo ENOTFOUND www.shirts4mike.com www.shirts4mike.com:80 
+Sat, 01 Apr 2017 17:13:08 GMT | 404
+Sat, 01 Apr 2017 17:13:10 GMT | 404
+Sat, 01 Apr 2017 17:13:12 GMT | 404
+Sat, 01 Apr 2017 17:13:13 GMT | 404
+Sat, 01 Apr 2017 17:19:11 GMT | Error: getaddrinfo ENOTFOUND www.shirts4mike.com www.shirts4mike.com:80
+Sat, 01 Apr 2017 17:50:04 GMT | Error: getaddrinfo ENOTFOUND www.shirts4mike.cm www.shirts4mike.cm:80
+Sat, 01 Apr 2017 17:50:04 GMT | Error: getaddrinfo ENOTFOUND www.shirts4mike.cm www.shirts4mike.cm:80
+Sat, 01 Apr 2017 17:50:04 GMT | Error: getaddrinfo ENOTFOUND www.shirts4mike.cm www.shirts4mike.cm:80
+Sat, 01 Apr 2017 17:50:04 GMT | Error: getaddrinfo ENOTFOUND www.shirts4mike.cm www.shirts4mike.cm:80
+Sat, 01 Apr 2017 17:50:04 GMT | Error: getaddrinfo ENOTFOUND www.shirts4mike.cm www.shirts4mike.cm:80
+Sat, 01 Apr 2017 17:50:04 GMT | Error: getaddrinfo ENOTFOUND www.shirts4mike.cm www.shirts4mike.cm:80
+Sat, 01 Apr 2017 17:50:04 GMT | Error: getaddrinfo ENOTFOUND www.shirts4mike.cm www.shirts4mike.cm:80
+Sat, 01 Apr 2017 17:54:34 GMT | undefined
+Sat, 01 Apr 2017 17:58:12 GMT | Error: Invalid URI "//www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:06:11 GMT | Error: Invalid URI "//www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:06:33 GMT | Error: Invalid URI "//www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:06:49 GMT | Error: Invalid URI "//www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:07:39 GMT | Error: Invalid URI "//www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:08:38 GMT | Error: Invalid URI "//www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:09:26 GMT | Error: Invalid URI "//www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:19:06 GMT | Error: Invalid URI "//www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:20:07 GMT | Error: Invalid URI "//www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:20:22 GMT | Error: Invalid URI "//www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:24:32 GMT | Error: Invalid URI "www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:25:23 GMT | Error: Invalid URI "www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:26:56 GMT | Error: Invalid URI "www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:27:23 GMT | Error: Invalid URI "www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:31:31 GMT | Error: Invalid URI "www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:32:24 GMT | null
+Sat, 01 Apr 2017 18:32:59 GMT | 404
+Sat, 01 Apr 2017 18:33:10 GMT | undefined
+Sat, 01 Apr 2017 18:33:19 GMT | 404
+Sat, 01 Apr 2017 18:33:27 GMT | Error: Invalid URI "www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:34:00 GMT | Error: Invalid URI "www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:34:15 GMT | Error: Invalid URI "www.shirts4mike.com/shirts.ph"
+Sat, 01 Apr 2017 18:35:07 GMT | Error: Invalid URI "www.shirts4mike.com/shirt.php?id=101"
+Sat, 01 Apr 2017 18:35:07 GMT | Error: Invalid URI "www.shirts4mike.com/shirt.php?id=102"
+Sat, 01 Apr 2017 18:35:07 GMT | Error: Invalid URI "www.shirts4mike.com/shirt.php?id=103"
+Sat, 01 Apr 2017 18:35:07 GMT | Error: Invalid URI "www.shirts4mike.com/shirt.php?id=104"
+Sat, 01 Apr 2017 18:35:07 GMT | Error: Invalid URI "www.shirts4mike.com/shirt.php?id=105"
+Sat, 01 Apr 2017 18:35:07 GMT | Error: Invalid URI "www.shirts4mike.com/shirt.php?id=106"
+Sat, 01 Apr 2017 18:35:07 GMT | Error: Invalid URI "www.shirts4mike.com/shirt.php?id=107"
+Sat, 01 Apr 2017 18:35:07 GMT | Error: Invalid URI "www.shirts4mike.com/shirt.php?id=108"
+Sat, 01 Apr 2017 18:35:39 GMT | 404
+Sat, 01 Apr 2017 18:35:39 GMT | 404
+Sat, 01 Apr 2017 18:35:39 GMT | 404
+Sat, 01 Apr 2017 18:35:40 GMT | 404
+Sat, 01 Apr 2017 18:35:40 GMT | 404
+Sat, 01 Apr 2017 18:35:40 GMT | 404
+Sat, 01 Apr 2017 18:35:40 GMT | 404
+Sat, 01 Apr 2017 18:35:40 GMT | 404
+Sat, 01 Apr 2017 18:37:42 GMT | Not Found
+Sat, 01 Apr 2017 18:37:42 GMT | Not Found
+Sat, 01 Apr 2017 18:37:43 GMT | Not Found
+Sat, 01 Apr 2017 18:37:43 GMT | Not Found
+Sat, 01 Apr 2017 18:37:43 GMT | Not Found
+Sat, 01 Apr 2017 18:37:43 GMT | Not Found
+Sat, 01 Apr 2017 18:37:44 GMT | Not Found
+Sat, 01 Apr 2017 18:37:44 GMT | Not Found
+Sat, 01 Apr 2017 18:37:53 GMT | undefined
+Sat, 01 Apr 2017 18:37:53 GMT | undefined
+Sat, 01 Apr 2017 18:37:53 GMT | undefined
+Sat, 01 Apr 2017 18:37:54 GMT | undefined
+Sat, 01 Apr 2017 18:37:54 GMT | undefined
+Sat, 01 Apr 2017 18:37:54 GMT | undefined
+Sat, 01 Apr 2017 18:37:54 GMT | undefined
+Sat, 01 Apr 2017 18:37:54 GMT | undefined
+Sat, 01 Apr 2017 18:38:02 GMT | Not Found
+Sat, 01 Apr 2017 18:38:02 GMT | Not Found
+Sat, 01 Apr 2017 18:38:02 GMT | Not Found
+Sat, 01 Apr 2017 18:38:03 GMT | Not Found
+Sat, 01 Apr 2017 18:38:03 GMT | Not Found
+Sat, 01 Apr 2017 18:38:03 GMT | Not Found
+Sat, 01 Apr 2017 18:38:03 GMT | Not Found
+Sat, 01 Apr 2017 18:38:03 GMT | Not Found
+Sat, 01 Apr 2017 18:39:14 GMT | Not Found 404
+Sat, 01 Apr 2017 18:39:14 GMT | Not Found 404
+Sat, 01 Apr 2017 18:39:14 GMT | Not Found 404
+Sat, 01 Apr 2017 18:39:14 GMT | Not Found 404
+Sat, 01 Apr 2017 18:39:15 GMT | Not Found 404
+Sat, 01 Apr 2017 18:39:15 GMT | Not Found 404
+Sat, 01 Apr 2017 18:39:15 GMT | Not Found 404
+Sat, 01 Apr 2017 18:39:15 GMT | Not Found 404
+Sat, 01 Apr 2017 18:40:16 GMT | Error: Invalid URI "www.shirts4mike.com/shirts.php" null
+Sat, 01 Apr 2017 18:41:51 GMT | Error: Invalid URI "www.shirts4mike.com/shirts.php" undefined
+Sat, 01 Apr 2017 18:42:20 GMT | Error: Invalid URI "www.shirts4mike.com/shirts.php" couldn't connect to server
+Sat, 01 Apr 2017 18:42:31 GMT | Error: Invalid URI "www.shirts4mike.com/shirts.php" Couldn't connect to server
+Sat, 01 Apr 2017 18:43:01 GMT | Error: Invalid URI "www.shirts4mike.com/shirts.php" Couldn't connect to server
+Sat, 01 Apr 2017 18:43:25 GMT | 404 Not Found
