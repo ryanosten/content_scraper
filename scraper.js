@@ -78,7 +78,7 @@ const logError = function(error, message){
 }
 
 //make get request to http://www.shirts4mike.com/shirts.php entry point
-request('http://www.shirts4mike.com/shirts.ph', (err, res, body) => {
+request('http://www.shirts4mike.com/shirts.php', (err, res, body) => {
 
     if(err) {
       logError(err, `Couldn't connect to server`);
