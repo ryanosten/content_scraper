@@ -13,11 +13,16 @@ const getShirts = function(item, callback){
 
   //make get request to shirt pages
   request(url, (err, res, body) => {
+
     if (err) {
       logError(err, `Couldn't connect to server`);
-    } else if (res.statusCode !== 200) {
+      return;
+    }
+
+    if (res.statusCode !== 200) {
       logError(res.statusCode, res.statusMessage);
-    } else {
+      return;
+    }
 
       const $ = cheerio.load(body, {
         ignoreWhitespace: true
@@ -39,7 +44,6 @@ const getShirts = function(item, callback){
         URL: url,
         Time
       });
-    };
   });
 };
 
@@ -74,13 +78,17 @@ const logError = function(error, message){
 }
 
 //make get request to http://www.shirts4mike.com/shirts.php entry point
-request('http://www.shirts4mike.com/shirts.php', (err, res, body) => {
-  //handle errors
-  if (err) {
-    logError(err, `Couldn't connect to server`);
-  } else if (res.statusCode !== 200) {
-    logError(res.statusCode, res.statusMessage);
-  } else {
+request('http://www.shirts4mike.com/shirts.ph', (err, res, body) => {
+
+    if(err) {
+      logError(err, `Couldn't connect to server`);
+      return;
+    }
+
+    if(res.statusCode !== 200) {
+      logError(res.statusCode, res.statusMessage);
+      return;
+    }
     //load cheerio for scraping html
     const $ = cheerio.load(body, {
       ignoreWhitespace: true
@@ -91,9 +99,7 @@ request('http://www.shirts4mike.com/shirts.php', (err, res, body) => {
 
     //iterator over all shirt anchors, run getShirts on each anchor element, return results
     async.map(shirtAnchors, getShirts, function(err, results){
-      if(err) throw err
       //generate CSV
       csvMagic(results);
     });
-  }
 });

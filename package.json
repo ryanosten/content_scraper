@@ -2,9 +2,8 @@
   "name": "node_scraper",
   "version": "1.0.0",
   "description": "web_scraper",
-  "main": "app.js",
+  "main": "scraper.js",
   "scripts": {
-    "test": "test",
     "start": "node scraper.js"
   },
   "repository": {
