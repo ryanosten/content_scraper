@@ -9,19 +9,21 @@ const async = require('async');
 //function to make request to shirt pages
 const getShirts = function(item, callback){
   //grab the list item href and make request to this path
-  const url = `htt://www.shirts4mike.com/${item.attribs.href}`;
+  const url = `http://www.shirts4mike.com/${item.attribs.href}`;
 
   //make get request to shirt pages
   request(url, (err, res, body) => {
     //handle error
     if (err) {
       logError(err, `Couldn't connect to server`);
-      callback(new Error(err))
+      callback(new Error(err));
+      return;
     }
     //handle bad response
     if (res.statusCode !== 200) {
       logError(res.statusCode, res.statusMessage);
       callback(new Error(err));
+      return;
     }
     //load parse body of response with cheerio
     const $ = cheerio.load(body, {
