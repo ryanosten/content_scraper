@@ -9,7 +9,7 @@ const async = require('async');
 //function to make request to shirt pages
 const getShirts = function(item, callback){
   //grab the list item href and make request to this path
-  const url = `htt://www.shirts4mike.com/${item.attribs.href}`;
+  const url = `http://www.shirts4mike.com/${item.attribs.href}`;
 
   //make get request to shirt pages
   request(url, (err, res, body) => {
